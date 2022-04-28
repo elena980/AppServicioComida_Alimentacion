@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".orders_list"
+    android:id="@+id/ordersMenu">
+
+    <item
+        android:id="@+id/user"
+        android:tooltipText="Users"
+        app:showAsAction="always"
+        android:title="@string/user"/>
+
+    <item
+        android:id="@+id/UserDate"
+        android:icon="@mipmap/close_buttom"
+        app:showAsAction="always"
+        android:title="@string/item"/>
+
+</menu>
