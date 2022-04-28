@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".UserData"
+    android:padding="50dp">
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UPDATE"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="EXIT"
+        />
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:text="@string/iduser"
+        android:textSize="15pt" />
+    <TextView
+        android:id="@+id/name"
+        android:layout_below="@+id/user"
+        android:layout_marginTop="20dp"
+        android:textSize="15pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name" />
+    <TextView
+        android:id="@+id/address"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="20dp"
+        android:textSize="15pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/address" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address"
+        android:layout_marginTop="20dp"
+        android:text="@string/phone"
+        android:textSize="15pt" />
+
+
+    <EditText
+        android:id="@+id/Name_EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="230dp"
+        android:ems="5"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/Address_EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Name_EditText"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:ems="5"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/Phone_EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Address_EditText"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:ems="5"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
+
+
+</RelativeLayout>
