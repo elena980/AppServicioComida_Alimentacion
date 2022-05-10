@@ -10,7 +10,7 @@
     <Button
         android:id="@+id/buttonCard"
         style="@style/botones"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/boton"
         android:onClick="cardPayment"
         android:text="@string/card"
@@ -21,9 +21,8 @@
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/buttonCard"
-        android:layout_marginLeft="45dp"
         android:layout_marginTop="49dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginStart="30dp"
         android:background="@android:color/white"
         android:orientation="vertical"
         android:padding="10dp"
@@ -98,15 +97,16 @@
         android:layout_below="@id/buttonCash"
         android:layout_marginTop="49dp"
         android:text="import"
-        android:textSize="55sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:visibility="gone"/>
 
     <Button
         android:id="@+id/buttonPay"
         style="@style/botones"
-        android:layout_below="@+id/cashText"
-        android:layout_marginTop="49dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="520dp"
         android:background="@drawable/boton03"
         android:text="@string/pay"
         android:textColor="@color/colorPrimary" />
