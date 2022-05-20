@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityStore02"
+    tools:layout_editor_absoluteY="25dp">
+
+    <!--
+    <ListView
+        android:id="@+id/lista_01"
+        android:layout_width="match_parent"
+        android:layout_height="455dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+        -->
+
+
+    <TextView
+        android:id="@+id/txt_producto01"
+        android:layout_width="227dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="550dp"
+        android:layout_marginStart="17dp"
+        android:text="Agua"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="normal"
+        app:fontFamily="sans-serif"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:id="@+id/txt_cantidad01"
+        android:layout_width="227dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="515dp"
+        android:layout_marginStart="17dp"
+        android:text="Unidades: 1"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="normal"
+        app:fontFamily="sans-serif"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:id="@+id/txt_subtotal01"
+        android:layout_width="227dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="480dp"
+        android:layout_marginStart="17dp"
+        android:text="Subotal: 1,50 €"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="normal"
+        app:fontFamily="sans-serif"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:id="@+id/txt_producto02"
+        android:layout_width="227dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="445dp"
+        android:text="Croquetas"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="normal"
+        app:fontFamily="sans-serif"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:id="@+id/txt_cantidad02"
+        android:layout_width="227dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="410dp"
+        android:layout_marginStart="17dp"
+        android:text="Unidades: 2"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="normal"
+        app:fontFamily="sans-serif"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:id="@+id/txt_subtotal02"
+        android:layout_width="227dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="375dp"
+        android:layout_marginStart="17dp"
+        android:text="Subotal: 11,50 €"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="normal"
+        app:fontFamily="sans-serif"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:id="@+id/txt_producto03"
+        android:layout_width="227dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="340dp"
+        android:text="Pizza Carbonara"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="normal"
+        app:fontFamily="sans-serif"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:id="@+id/txt_cantidad04"
+        android:layout_width="227dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="305dp"
+        android:text="Unidades: 2"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="normal"
+        app:fontFamily="sans-serif"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:id="@+id/txt_subtotal05"
+        android:layout_width="227dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="270dp"
+        android:layout_marginStart="17dp"
+        android:text="Subotal: 17,00 €"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="normal"
+        app:fontFamily="sans-serif"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:id="@+id/txt_total"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="58dp"
+        android:layout_marginBottom="80dp"
+        android:text="Total: 30,00 €"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:typeface="normal"
+        app:fontFamily="sans-serif"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:id="@+id/txt_pay"
+        android:layout_width="300dp"
+        android:layout_height="41dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="150dp"
+        android:layout_marginStart="17dp"
+        android:text="Método de pago: Efectivo"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="normal"
+        app:fontFamily="sans-serif"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:id="@+id/txt_adress"
+        android:layout_width="350dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="200dp"
+        android:text="Dirección: C/ Santa Lucía 13, 3ºA "
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="normal"
+        app:fontFamily="sans-serif"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <Button
+        android:id="@+id/btn_cancelar"
+        style="@style/botones"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/txt_total"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="115dp"
+        android:background="@drawable/boton"
+        android:onClick="borrarPedido"
+        android:text="FINALIZAR"
+        android:textColor="@color/white" />
+    <!--
+    <Button
+        android:id="@+id/btn_pago"
+        style="@style/botones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txt_total"
+        android:layout_alignEnd="@+id/btn_cancelar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/boton"
+        android:text="@string/pago"
+        android:textColor="@color/white" />
+    -->
+
+</RelativeLayout>

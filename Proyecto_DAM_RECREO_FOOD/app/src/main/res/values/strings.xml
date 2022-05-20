@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Food_Delivery</string>
+    <string name="nombre">Nombre</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="name">Nombre</string>
+    <string name="address">Dirección</string>
+    <string name="surname">Apellidos</string>
+    <string name="save">GUARDAR</string>
+    <string name="phone">Teléfono</string>
+    <string name="registration_title">Registro</string>
+    <string name="food_delivery">FOOD DELIVERY</string>
+    <string name="imagen_fondo">imagen_fondo</string>
+    <string name="usuario">Usuario</string>
+    <string name="login">Login</string>
+    <string name="registro">Registro</string>
+    <string name="borrar_pedido">Borrar pedido</string>
+    <string name="icono_usuario">icono_usuario</string>
+    <string name="titulo_menu">Menú Food Delivery</string>
+    <string name="titulo_login_registro">Login/Registro</string>
+    <string name="titulo_registro">Registro</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="icono_carrito">icono_carrito</string>
+    <string name="total">Total:</string>
+    <string name="recreo">RECREO FOOD DELIVERY</string>
+    <string name="new_password">Nueva contraseña</string>
+    <string name="name_edit">Edite su nombre</string>
+    <string name="surname_edit">Edite sus apellidos</string>
+    <string name="edition_button">EDITAR</string>
+    <string name="edicion">Edición Datos Personales</string>
+    <string name="phone_edit">Edite su teléfono</string>
+    <string name="address_edit">Edite su direccion</string>
+    <string name="pago">PAGO</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="enviar_al_carrito">Enviar al carrito</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="titulo_pedido">Pedido</string>
+    <string name="producto">Producto:</string>
+    <string name="precio_unitario">Precio Unitario:</string>
+    <string name="subtotal">Subtotal:</string>
+    <string name="tarjeta_credito">Tarjeta de Crédito</string>
+    <string name="efectivo">Efectivo</string>
+    <string name="csv">CSV</string>
+    <string name="fecha_de_caducidad">Fecha de caducidad</string>
+    <string name="numero">Numero</string>
+    <string name="totalOrder">Total: </string>
+
+
+    <string-array name="opciones">
+        <item>Bebidas</item>
+        <item>Raciones</item>
+        <item>Ensaladas</item>
+        <item>Hamburguesas</item>
+        <item>Sandwiches</item>
+        <item>Pizzas</item>
+        <item>Postres</item>
+        <item>Ir al Carro de compras</item>
+    </string-array>
+</resources>

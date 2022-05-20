@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/CaRLiToS/AndroidStudioProjects/Proyecto_DAM/app/src/main/res/layout/activity_03.xml" value="0.1" />
+        <entry key="..\:/Users/CaRLiToS/AndroidStudioProjects/Proyecto_DAM/app/src/main/res/layout/activity_edicion.xml" value="0.22" />
+        <entry key="..\:/Users/CaRLiToS/AndroidStudioProjects/Proyecto_DAM/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/CaRLiToS/AndroidStudioProjects/Proyecto_DAM/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/CaRLiToS/AndroidStudioProjects/Proyecto_DAM/app/src/main/res/layout/activity_payment.xml" value="0.25" />
+        <entry key="..\:/Users/CaRLiToS/AndroidStudioProjects/Proyecto_DAM/app/src/main/res/layout/activity_payment02.xml" value="0.25" />
+        <entry key="..\:/Users/CaRLiToS/AndroidStudioProjects/Proyecto_DAM/app/src/main/res/layout/activity_registration.xml" value="0.12" />
+        <entry key="..\:/Users/CaRLiToS/AndroidStudioProjects/Proyecto_DAM/app/src/main/res/layout/activity_store.xml" value="0.1" />
+        <entry key="..\:/Users/CaRLiToS/AndroidStudioProjects/Proyecto_DAM/app/src/main/res/layout/activity_store_02.xml" value="0.22" />
+        <entry key="..\:/Users/CaRLiToS/AndroidStudioProjects/Proyecto_DAM/app/src/main/res/layout/item_pedido.xml" value="0.1" />
+        <entry key="..\:/Users/CaRLiToS/AndroidStudioProjects/Proyecto_DAM/app/src/main/res/layout/item_pedido_02.xml" value="0.33" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/drawable/boton.xml" value="0.20925925925925926" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/drawable/boton02.xml" value="0.20925925925925926" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/drawable/color_borde.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/drawable/gradient.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/layout/activity_01.xml" value="0.1" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/layout/activity_02.xml" value="0.18518518518518517" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/layout/activity_03.xml" value="0.18518518518518517" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/layout/activity_edicion.xml" value="0.25" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/layout/activity_login.xml" value="0.10925925925925926" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/layout/activity_main.xml" value="0.19907407407407407" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/layout/activity_registration.xml" value="0.19907407407407407" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/layout/activity_splash.xml" value="0.209375" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/layout/activity_store.xml" value="0.21" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/layout/item_pedido.xml" value="0.209375" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/menu/menu.xml" value="0.10925925925925926" />
+        <entry key="..\:/Users/CaRLiToS/Proyecto_DAM/app/src/main/res/menu/menu_02.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
