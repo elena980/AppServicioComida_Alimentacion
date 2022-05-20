@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditionActivity"
+    android:background="@mipmap/people">
+
+
+
+    <EditText
+        android:id="@+id/editPass"
+        style="@style/editext1"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/text"
+        android:hint="@string/password"
+        android:inputType="numberPassword"
+        android:textColor="@color/colorSecondary"
+        android:textColorHint="@color/colorSecondary" />
+    <EditText
+        android:id="@+id/editName"
+        style="@style/editext1"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/editPass"
+        android:background="@drawable/text"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:textColorHint="@color/colorSecondary"
+        android:textColor="@color/colorSecondary"/>
+
+    <EditText
+        android:id="@+id/editSurname"
+        style="@style/editext1"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/editName"
+        android:background="@drawable/text"
+        android:hint="@string/surname"
+        android:inputType="text"
+        android:textColorHint="@color/colorSecondary"
+        android:textColor="@color/colorSecondary"/>
+
+
+    <EditText
+        android:id="@+id/editAdress"
+        style="@style/editext1"
+        android:layout_below="@+id/editSurname"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text"
+        android:hint="@string/address"
+        android:inputType="text"
+        android:textColor="@color/colorSecondary"
+        android:textColorHint="@color/colorSecondary" />
+
+    <EditText
+        android:id="@+id/editTelephone"
+        style="@style/editext1"
+        android:layout_below="@+id/editAdress"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text"
+        android:hint="@string/telephone"
+        android:inputType="number"
+        android:textColor="@color/colorSecondary"
+        android:textColorHint="@color/colorSecondary" />
+
+
+    <Button
+        android:id="@+id/editButton"
+        style="@style/botones"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/boton"
+        android:onClick="editarCuenta"
+        android:text="@string/edition_button"
+        android:textColor="@color/white" />
+
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Food_Delivery</string>
+    <string name="nombre">Nombre</string>
+    <string name="user">User</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="surname">Surname</string>
+    <string name="save">Save</string>
+    <string name="phone">Teléfono</string>
+    <string name="registration_title">Registro</string>
+    <string name="food_delivery">FOOD DELIVERY</string>
+    <string name="imagen_fondo">imagen_fondo</string>
+    <string name="usuario">User</string>
+    <string name="login">Login</string>
+    <string name="registro">Register</string>
+    <string name="borrar_pedido">Borrar pedido</string>
+    <string name="icono_usuario">icono_usuario</string>
+    <string name="titulo_menu">Menú Food Delivery</string>
+    <string name="titulo_login_registro">Login/Registro</string>
+    <string name="titulo_registro">Registro</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="icono_carrito">icono_carrito</string>
+    <string name="total">Total:</string>
+    <string name="recreo">RECREO FOOD DELIVERY</string>
+    <string name="new_password">Nueva contraseña</string>
+    <string name="name_edit">Edite su nombre</string>
+    <string name="surname_edit">Edite sus apellidos</string>
+    <string name="edition_button">EDITAR</string>
+    <string name="edicion">Edición Datos Personales</string>
+    <string name="phone_edit">Edite su teléfono</string>
+    <string name="address_edit">Edite su direccion</string>
+    <string name="pago">PAGO</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="enviar_al_carrito">Enviar al carrito</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="telephone">Telephone</string>
+    <string name="_0">0</string>
+    <string name="total_0000">Total: 0000</string>
+    <string name="card_number">Card number</string>
+    <string name="expirate_date">Expirate Date</string>
+    <string name="csv">CSV</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="cash">Cash</string>
+    <string name="pay">Pay</string>
+    <string name="finallyOrder">Order number: </string>
+    <string name="dataOrder">Import:  /n Payment method: </string>
+
+
+    <string-array name="opciones">
+        <item>Bebidas</item>
+        <item>Raciones</item>
+        <item>Ensaladas</item>
+        <item>Hamburguesas</item>
+        <item>Sandwiches</item>
+        <item>Pizzas</item>
+        <item>Postres</item>
+    </string-array>
+</resources>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity03"
+    tools:layout_editor_absoluteY="25dp"
+    android:id="@+id/relativeLayout">
+
+    <ImageView
+        android:id="@+id/image01"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/color_borde"
+        android:padding="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/image01"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/txt_name"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:text="TextView"
+        android:textColor="@color/colorSecondary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/txt_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <TextView
+        android:id="@+id/txt_desc"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/txt_price"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="20dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:fontFamily="serif"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <TextView
+        android:id="@+id/txt_cant"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/btn_01"
+        android:layout_toEndOf="@+id/btn_01"
+        android:ems="10"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/colorSecondary"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_01" />
+
+    <Button
+        android:id="@+id/btn_01"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/cantCart"
+        android:layout_alignStart="@+id/txt_name"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/boton"
+        android:onClick="restar"
+        android:text="-"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="506dp" />
+
+
+    <Button
+        android:id="@+id/btn_02"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/txt_cant"
+        android:layout_toEndOf="@+id/txt_cant"
+        android:background="@drawable/boton"
+        android:gravity="center"
+        android:onClick="agregar"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_cant"
+        tools:layout_editor_absoluteX="137dp"
+        tools:layout_editor_absoluteY="506dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginBottom="33dp"
+        android:backgroundTint="@color/purple_200"
+        android:onClick="addCart"
+        android:src="@mipmap/plus" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_trolly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/purple_200"
+        android:src="@mipmap/carrito" />
+
+    <TextView
+        android:id="@+id/countProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_trolly"
+        android:layout_marginLeft="350dp"
+        android:layout_marginBottom="-510dp"
+        android:text="@string/_0"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cantCart"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_below="@id/txt_desc"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/cantidad"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+</RelativeLayout>

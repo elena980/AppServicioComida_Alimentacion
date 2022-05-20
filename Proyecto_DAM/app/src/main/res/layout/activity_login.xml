@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@mipmap/fondo_login">
+
+    <EditText
+        android:id="@+id/cajaUser"
+        style="@style/cajasTextos"
+        android:layout_marginTop="320dp"
+        android:background="@drawable/text"
+        android:hint="@string/usuario"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="text"
+        android:textSize="25sp"
+        android:textColor="@color/colorSecondary"
+        android:textColorHint="@color/colorSecondary"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/cajaPass"
+        style="@style/cajasTextos"
+        android:layout_below="@+id/cajaUser"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/text"
+        android:gravity="center"
+        android:hint="@string/password"
+        android:inputType="numberPassword"
+        android:textColor="@color/colorSecondary"
+        android:textColorHint="@color/colorSecondary"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/botonLogin"
+        style="@style/button1"
+        android:layout_below="@+id/cajaPass"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/boton"
+        android:onClick="login"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="25sp"/>
+
+
+    <Button
+        android:id="@+id/cuentaNueva"
+        style="@style/button2"
+        android:layout_alignBaseline="@+id/botonLogin"
+        android:layout_toRightOf="@+id/botonLogin"
+        android:background="@drawable/boton02"
+        android:onClick="registrationActivity"
+        android:text="@string/registro"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp" />
+
+</RelativeLayout>

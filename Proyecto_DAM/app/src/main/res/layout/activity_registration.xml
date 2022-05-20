@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity"
+    android:background="@mipmap/people">
+
+    <EditText
+        android:id="@+id/userBox"
+        style="@style/editext1"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/text"
+        android:hint="@string/user"
+        android:inputType="text"
+        android:textColor="@color/colorSecondary"
+        android:textColorHint="@color/colorSecondary" />
+    <EditText
+        android:id="@+id/passwordBox"
+        style="@style/editext1"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/userBox"
+        android:background="@drawable/text"
+        android:hint="@string/password"
+        android:inputType="text"
+        android:textColor="@color/colorSecondary"
+        android:textColorHint="@color/colorSecondary" />
+    <EditText
+        android:id="@+id/nameBox"
+        style="@style/editext1"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/passwordBox"
+        android:background="@drawable/text"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:textColorHint="@color/colorSecondary"
+        android:textColor="@color/colorSecondary"/>
+
+    <EditText
+        android:id="@+id/surnameBox"
+        style="@style/editext1"
+        android:layout_below="@+id/nameBox"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text"
+        android:hint="@string/surname"
+        android:inputType="text"
+        android:textColor="@color/colorSecondary"
+        android:textColorHint="@color/colorSecondary" />
+    <EditText
+        android:id="@+id/addressBox"
+        style="@style/editext1"
+        android:layout_below="@+id/surnameBox"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text"
+        android:hint="@string/address"
+        android:inputType="text"
+        android:textColor="@color/colorSecondary"
+        android:textColorHint="@color/colorSecondary" />
+
+    <EditText
+        android:id="@+id/phoneBox"
+        style="@style/editext1"
+        android:layout_below="@+id/addressBox"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/text"
+        android:hint="@string/telephone"
+        android:inputType="number"
+        android:textColor="@color/colorSecondary"
+        android:textColorHint="@color/colorSecondary" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/botones"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/boton"
+        android:onClick="createAccount"
+        android:text="@string/save"
+        android:textColor="@color/white" />
+</RelativeLayout>
