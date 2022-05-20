@@ -63,7 +63,8 @@ public class Payment extends AppCompatActivity {
         }
         if(indexCash.isChecked()){
             Toast.makeText(getApplicationContext(),"order paid by cash" ,Toast.LENGTH_SHORT).show();
-        } else {
+        }
+        if(!indexCash.isChecked() & !indexCard.isChecked()) {
             Toast.makeText(getApplicationContext(),"Please select a payment method" ,Toast.LENGTH_SHORT).show();
         }
 
