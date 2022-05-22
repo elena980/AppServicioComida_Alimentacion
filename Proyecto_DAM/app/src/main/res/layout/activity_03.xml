@@ -150,20 +150,9 @@
         android:layout_marginLeft="310dp"
         android:layout_marginTop="500dp"
         android:layout_marginBottom="32dp"
+        android:onClick="viewCart"
         android:backgroundTint="@color/purple_200"
         android:src="@mipmap/carrito" />
-
-    <TextView
-        android:id="@+id/countProduct"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_trolly"
-        android:layout_marginLeft="350dp"
-        android:layout_marginBottom="-510dp"
-        android:text="@string/_0"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/cantCart"
@@ -174,7 +163,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
-        android:text="@string/cantidad"
+        android:text="@string/quantity"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         android:textStyle="bold" />

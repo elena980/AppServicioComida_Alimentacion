@@ -24,7 +24,7 @@ public class Payment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
-
+        getSupportActionBar().hide();
         nameCard = (EditText) findViewById(R.id.nameCard);
         numberCard = (EditText) findViewById(R.id.numberCard);
         expirateDate = (EditText) findViewById(R.id.expirate_date);

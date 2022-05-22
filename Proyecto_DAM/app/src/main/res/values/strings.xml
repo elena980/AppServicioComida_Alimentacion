@@ -45,15 +45,17 @@
     <string name="pay">Pay</string>
     <string name="finallyOrder">Order number: </string>
     <string name="dataOrder">Import:  /n Payment method: </string>
+    <string name="quantity">Quantity</string>
+    <string name="cancel">Cancel</string>
 
 
     <string-array name="opciones">
-        <item>Bebidas</item>
-        <item>Raciones</item>
-        <item>Ensaladas</item>
-        <item>Hamburguesas</item>
+        <item>Drinks</item>
+        <item>Rations</item>
+        <item>Salads</item>
+        <item>Hamburguers</item>
         <item>Sandwiches</item>
         <item>Pizzas</item>
-        <item>Postres</item>
+        <item>Deserts</item>
     </string-array>
 </resources>

@@ -23,7 +23,7 @@ public class RegistrationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
         helper = new HelperBD(this);
-        this.setTitle(getString(R.string.titulo_registro));
+        this.setTitle("Registration");
     }
 
     public void createAccount(View view) {

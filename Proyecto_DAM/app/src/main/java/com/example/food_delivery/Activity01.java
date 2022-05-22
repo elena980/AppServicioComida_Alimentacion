@@ -15,7 +15,7 @@ public class Activity01 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_01);
-        this.setTitle("RECREO FOOD DELIVERY");
+        this.setTitle("Food delivery Recreation");
 
 
     }

@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         helper = new HelperBD(this);
         this.setTitle(getString(R.string.titulo_login_registro));
-
+        getSupportActionBar().hide();
 
     }
 

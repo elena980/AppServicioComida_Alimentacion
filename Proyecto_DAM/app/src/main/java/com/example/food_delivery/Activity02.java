@@ -52,10 +52,10 @@ public class Activity02 extends AppCompatActivity {
                 //DE DECLARA EL ARREGLO MEDIANTE UN ADAPTADOR
                 listaBebidas = findViewById(R.id.lista);
                 //Se define un adaptador que contiene un ArrayList de Producto.cervezas
-                ArrayAdapter<Producto> adaptador01 = new ArrayAdapter<Producto>(this, android.R.layout.simple_list_item_1, Producto.bebidas);
+                ArrayAdapter<Product> adaptador01 = new ArrayAdapter<Product>(this, android.R.layout.simple_list_item_1, Product.drinks);
                 //Definición del adaptador
                 listaBebidas.setAdapter(adaptador01);
-                this.setTitle("Bebidas");
+                this.setTitle("Drinks");
                 //Creación de ItemClickListener para el ListView ListaCervezas
                 listaBebidas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -81,10 +81,10 @@ public class Activity02 extends AppCompatActivity {
                 //DE DECLARA EL ARREGLO MEDIANTE UN ADAPTADOR
                 listaRaciones = findViewById(R.id.lista);
                 //Se define un adaptador que contiene un ArrayList de Producto.cervezas
-                ArrayAdapter<Producto> adaptador02 = new ArrayAdapter<Producto>(this, android.R.layout.simple_list_item_1, Producto.raciones);
+                ArrayAdapter<Product> adaptador02 = new ArrayAdapter<Product>(this, android.R.layout.simple_list_item_1, Product.rations);
                 //Definición del adaptador
                 listaRaciones.setAdapter(adaptador02);
-                this.setTitle("Raciones");
+                this.setTitle("Rations");
                 //Creación de ItemClickListener para el ListView ListaCervezas
                 listaRaciones.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -109,10 +109,10 @@ public class Activity02 extends AppCompatActivity {
                 //DE DECLARA EL ARREGLO MEDIANTE UN ADAPTADOR
                 listaEnsaladas = findViewById(R.id.lista);
                 //Se define un adaptador que contiene un ArrayList de Producto.cervezas
-                ArrayAdapter<Producto> adaptador03 = new ArrayAdapter<Producto>(this, android.R.layout.simple_list_item_1, Producto.ensaladas);
+                ArrayAdapter<Product> adaptador03 = new ArrayAdapter<Product>(this, android.R.layout.simple_list_item_1, Product.salads);
                 //Definición del adaptador
                 listaEnsaladas.setAdapter(adaptador03);
-                this.setTitle("Ensaladas");
+                this.setTitle("Salads");
                 //Creación de ItemClickListener para el ListView ListaCervezas
                 listaEnsaladas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -137,10 +137,10 @@ public class Activity02 extends AppCompatActivity {
                 //DE DECLARA EL ARREGLO MEDIANTE UN ADAPTADOR
                 listaHamburguesas = findViewById(R.id.lista);
                 //Se define un adaptador que contiene un ArrayList de Producto.cervezas
-                ArrayAdapter<Producto> adaptador04 = new ArrayAdapter<Producto>(this, android.R.layout.simple_list_item_1, Producto.hamburguesas);
+                ArrayAdapter<Product> adaptador04 = new ArrayAdapter<Product>(this, android.R.layout.simple_list_item_1, Product.hamburguers);
                 //Definición del adaptador
                 listaHamburguesas.setAdapter(adaptador04);
-                this.setTitle("Hamburguesas");
+                this.setTitle("Hamburguers");
                 //Creación de ItemClickListener para el ListView ListaCervezas
                 listaHamburguesas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -165,7 +165,7 @@ public class Activity02 extends AppCompatActivity {
                 //DE DECLARA EL ARREGLO MEDIANTE UN ADAPTADOR
                 listaSandwiches = findViewById(R.id.lista);
                 //Se define un adaptador que contiene un ArrayList de Producto.cervezas
-                ArrayAdapter<Producto> adaptador05 = new ArrayAdapter<Producto>(this, android.R.layout.simple_list_item_1, Producto.sandwiches);
+                ArrayAdapter<Product> adaptador05 = new ArrayAdapter<Product>(this, android.R.layout.simple_list_item_1, Product.sandwiches);
                 //Definición del adaptador
                 listaSandwiches.setAdapter(adaptador05);
                 this.setTitle("Sandwiches");
@@ -193,7 +193,7 @@ public class Activity02 extends AppCompatActivity {
                 //DE DECLARA EL ARREGLO MEDIANTE UN ADAPTADOR
                 listaPizzas = findViewById(R.id.lista);
                 //Se define un adaptador que contiene un ArrayList de Producto.cervezas
-                ArrayAdapter<Producto> adaptador06 = new ArrayAdapter<Producto>(this, android.R.layout.simple_list_item_1, Producto.pizzas);
+                ArrayAdapter<Product> adaptador06 = new ArrayAdapter<Product>(this, android.R.layout.simple_list_item_1, Product.pizzas);
                 //Definición del adaptador
                 listaPizzas.setAdapter(adaptador06);
                 this.setTitle("Pizzas");
@@ -222,10 +222,10 @@ public class Activity02 extends AppCompatActivity {
                 //DE DECLARA EL ARREGLO MEDIANTE UN ADAPTADOR
                 listaPostres = findViewById(R.id.lista);
                 //Se define un adaptador que contiene un ArrayList de Producto.cervezas
-                ArrayAdapter<Producto> adaptador07 = new ArrayAdapter<Producto>(this, android.R.layout.simple_list_item_1, Producto.postres);
+                ArrayAdapter<Product> adaptador07 = new ArrayAdapter<Product>(this, android.R.layout.simple_list_item_1, Product.deserts);
                 //Definición del adaptador
                 listaPostres.setAdapter(adaptador07);
-                this.setTitle("Postres");
+                this.setTitle("Deserts");
 
                 //Creación de ItemClickListener para el ListView ListaCervezas
                 listaPostres.setOnItemClickListener(new AdapterView.OnItemClickListener() {
