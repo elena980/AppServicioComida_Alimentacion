@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.329" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/drawable/button1.xml" value="0.1575" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/drawable/button1_resource.xml" value="0.1575" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/drawable/button2.xml" value="0.1575" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/drawable/button2_resource.xml" value="0.1575" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/drawable/gradient.xml" value="0.1" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/drawable/text.xml" value="0.2215" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/drawable/texts.xml" value="0.1575" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/layout/activity_login.xml" value="0.22807017543859648" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/layout/activity_main_page.xml" value="0.264" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/layout/app_bar_main.xml" value="0.25" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/layout/main_content.xml" value="0.25" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/layout/nav_header_main.xml" value="0.264" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/menu/main_menu.xml" value="0.25" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/menu/mainmenu.xml" value="0.25" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/menu/menu_mainpage.xml" value="0.25" />
+        <entry key="..\:/Users/esm98/AndroidStudioProjects/Online_Recreation/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.329" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

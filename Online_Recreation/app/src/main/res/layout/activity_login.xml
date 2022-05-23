@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@mipmap/login_background">
+
+    <EditText
+        android:id="@+id/numberTelephone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="305dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/text"
+        android:hint="@string/enter_telephone_number"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:textSize="19sp" />
+    <EditText
+        android:id="@+id/numberCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="305dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/text"
+        android:hint="@string/enter_code_received"
+        android:padding="10dp"
+        android:inputType="number"
+        android:textSize="19sp"
+        android:visibility="gone"/>
+
+
+    <Button
+        android:id="@+id/sendButton"
+        style="@style/buttons"
+        android:layout_below="@+id/numberTelephone"
+        android:background="@drawable/button1"
+        android:text="@string/send_code"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/acceptButton"
+        style="@style/buttons"
+        android:layout_below="@+id/numberCode"
+        android:background="@drawable/button1"
+        android:text="@string/accept"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/facebookButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/o_you_can_enter_with"
+        android:textSize="30dp" />
+
+
+    <Button
+        android:id="@+id/facebookButton"
+        style="@style/buttonsSmall"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_toRightOf="@+id/guest"
+        android:background="@drawable/button1"
+        android:text="@string/facebbok"
+        android:textColor="@color/colorSecondary" />
+
+    <Button
+        android:id="@+id/guest"
+        style="@style/buttonsSmall"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="46dp"
+        android:background="@drawable/button2"
+        android:onClick="guest"
+        android:text="@string/guest"
+        android:textColor="@color/colorSecondary" />
+</RelativeLayout>

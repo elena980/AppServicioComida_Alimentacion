@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "239405485415",
+    "project_id": "onlinerecreation-ca84e",
+    "storage_bucket": "onlinerecreation-ca84e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239405485415:android:3590465adcc7fe9f7a33c2",
+        "android_client_info": {
+          "package_name": "com.example.online_recreation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239405485415-e5q1hsjjsgrohuv5r05k6ur9cfcoj91b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ2iwUexRLhbm6LVgbQtMIl0elRZ2kylg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239405485415-e5q1hsjjsgrohuv5r05k6ur9cfcoj91b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
