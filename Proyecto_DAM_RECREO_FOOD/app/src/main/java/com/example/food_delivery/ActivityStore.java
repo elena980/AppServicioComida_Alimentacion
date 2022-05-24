@@ -1,9 +1,10 @@
 package com.example.food_delivery;
 
-import android.content.ContentValues;
+
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -13,22 +14,23 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.food_delivery.db.EstructuraBD;
 import com.example.food_delivery.db.HelperBD;
 
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+
+/**
+ * Clase que muestra los datos de la base de datos "pedidos", los productos agregados al carrito
+ */
 
 public class ActivityStore extends AppCompatActivity {
     //Declaración de variables
-    Cursor cursor;
-    ListView lista;
-    TextView total;
-    String usuario;
-    HelperBD helper;
-    ArrayList<String> producto;
-    private ArrayAdapter<String> adaptador;
+    public static Cursor cursor;
+    public static ListView lista;
+    public static TextView total;
+    public static String usuario;
+    public static int acum;
+    public static HelperBD helper;
+    public static Context context;
 
     @Override
     /**
@@ -37,94 +39,39 @@ public class ActivityStore extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_store);
-        helper = new HelperBD(this);
-        //helper = new HelperBD(this);
-        lista =(ListView) findViewById(R.id.lista);
         usuario = getIntent().getStringExtra("usuario");
+        helper = new HelperBD(this);
+
+        // Se instancia XML a JAVA
+        lista =(ListView) findViewById(R.id.lista);
         total = (TextView) findViewById(R.id.txt_total);
-        //int acum = 0;
-        //actualizarUI();
-
-        //total.setText(total.getText() + " €" + acum);
-        this.setTitle("Carrito");
-        //int acum = 0;
-        //actualizarUI();
-        //total.setText(total.getText() + " €" + acum);
-        //lista = (ListView) findViewById(R.id.lista);
-
-
-
-
         //Llamado al método definirLista()
         definirLista();
-        //actulizarUI02(producto);
+
+        this.setTitle("Carrito");
+
     }//Fin onCreate()
-
-    /**
-     * Método encargado de hacer la conexión con la BD
-     */
-
-    public void ejecutarQuery(){
-      //public Cursor ejecutarQuery(){
-        //Instanciación de la clase HelperBD
-        //HelperBD helper = new HelperBD(this);
-        //Se habilita la bd para obtener datos
-        SQLiteDatabase db = helper.getReadableDatabase();
-        //Arreglo que define de cuales columnas de la BD se recopilará información
-/*
-          String[] projection = {
-                EstructuraBD.COLUMNA10,
-                EstructuraBD.COLUMNA12,
-                EstructuraBD.COLUMNA13
-        };
-*/
-        //String [] usuario01 ={""};
-
-        //Se almacena los datos obtenidos de la consulta en un objeto del tipo Cursor
-/*
-        cursor = db.query(
-                EstructuraBD.TABLE_NAME_02,   // La tabla de la consulta
-                projection,             // El arreglo de las columnas de las cuales se retorna información
-                null,              // Columnas involucradas en declaración WHERE
-                null,                   // Valores de la declaración WHERE
-                null,                   // Agrupación de filas
-                null,                   // Filtro de filas
-                null              // Orden
-        );
-
- */
-        //return cursor;
-
-        cursor = db.rawQuery("SELECT NOMBRE, CANTIDAD, PRECIO FROM PEDIDOS", null);
-        //db.close();
-    }//Fin ejecutarQuery()
 
     /**
      * Método encargado de definir los datos del ListView correspondiente
      */
-    public void definirLista(){
+    public static void definirLista(){
         //Se realiza un captura de error en caso de que no existan articulos en la tabla
         try {
-            //Llamado al método ejecutarQuery()
-            //cursor = ejecutarQuery();
-            //ejecutarQuery();
-            //helper = new HelperBD(this);
-            //Se habilita la bd para obtener datos
-            //SQLiteDatabase db = helper.getReadableDatabase();
-            //cursor = helper.obtenerPedidos();
+            // Llamado al método ejecutarQuery()
+            cursor = helper.ejecutarQuery(usuario);
 
             //Se posiciona el cursor en el primer valor obtenido
-            //cursor.moveToFirst();
-            //Se instancia XML a JAVA
-            //lista = findViewById(R.id.lista);
-            //total = findViewById(R.id.txt_total);
+            cursor.moveToFirst();
+
             //Creación de una variable acumuladora utilizada para el total
-            int acum = 0;
+            acum = 0;
+
             //Instanciación de un ArrayList del tipo String que será utilizada para ingresar los datos obtenidos
             //de la consulta, en el adaptador
-            //ArrayList<String> producto = new ArrayList<String>();
+            ArrayList<String> producto = new ArrayList<String>();
+
             //Ciclo do-while que recorre el cursor guardando los datos obtenidos en el ArrayList producto
-            /*
             do{
                 // Declaración de valores obtenidos en variables utilizadas para calcular el total
                 int cant = Integer.parseInt(cursor.getString(1));
@@ -135,29 +82,19 @@ public class ActivityStore extends AppCompatActivity {
                 //Variable acumuladora que va calculando el total el pedido
                  acum = acum + (precio * cant);
             }while (cursor.moveToNext());//Fin Do-While
-               */
+
 
             //Definición de adaptador
-            //if(helper.numeroRegistros(usuario) == 0){
-              //  lista.setAdapter(null);
-            //}else {
-            // ArrayList<String> producto = helper.obtenerPedidos02();
-            //producto = helper.obtenerPedidos02();
-            //adaptador = new ArrayAdapter<>(this, R.layout.item_pedido, R.id.pedido_title, helper.obtenerPedidos03());
-            //ArrayAdapter<String> adaptador = new ArrayAdapter<>(this, R.layout.item_pedido, R.id.pedido_title, producto);
-            //adaptador = new ArrayAdapter<>(this, R.layout.item_pedido, R.id.pedido_title, producto);
-            //adaptador = new ArrayAdapter<>(this, R.layout.item_pedido, R.id.pedido_title, producto);
-            //lista.setAdapter(adaptador);
-            //actualizarUI();
-            //}
-            //
+            ArrayAdapter<String> adaptador = new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, producto);
+            lista.setAdapter(adaptador);
+
             //Se define el total obtenido en el TextView total
             total.setText(total.getText() + " €" + acum);
             //Se cierra el cursor
-            //cursor.close();
+            cursor.close();
         }catch(Exception e ){
             //Se muestra en pantalla si no se encuentran registros en la tabla de la BD
-            Toast.makeText(this,"NO HAY ARTICULOS EN EL CARRITO",Toast.LENGTH_LONG).show();
+           Toast.makeText(context, "NO HAY ARTICULOS EN EL CARRITO",Toast.LENGTH_LONG).show();
         }//Fin Try-Catch
     }//Fin definirLista()
 
@@ -169,12 +106,6 @@ public class ActivityStore extends AppCompatActivity {
         //Captura de error de Activity
         try {
             //Se habilita BD para escucha
-            //HelperBD helper = new HelperBD(this);
-            //SQLiteDatabase db = helper.getWritableDatabase();
-            //Se ejecuta una sentencia SQL que elimina todos los registros de la tabla
-            //db.execSQL(EstructuraBD.SQL_DELETE_REGISTERS_02);
-            //db.close();
-            //actulizarUI02(producto);
             helper.borrarPedido(usuario);
             onCreate(null);
         }catch (Exception e){//En caso de error de Activity producido
@@ -186,26 +117,30 @@ public class ActivityStore extends AppCompatActivity {
         }//Fin Try-Catch
     }//Fin cancelarPedido()
 
-/*
-    public void actulizarUI02(){
-        if(helper.numeroRegistros() == 0){
-            lista.setAdapter(null);
-        }else{
-            adaptador = new ArrayAdapter<>(this, R.layout.item_pedido, R.id.pedido_title, helper.obtenerPedidos03());
-            lista.setAdapter(adaptador);
-        }
+
+    public static Cursor getCursor() {
+        return cursor;
     }
 
-    private void actualizarUI() {
-        if(helper.numeroRegistros() > 0){
-            adaptador = new ArrayAdapter<>(this, R.layout.item_pedido, R.id.pedido_title, helper.obtenerPedidos03());
-            lista.setAdapter(adaptador);
-        }
-
+    public static ListView getLista() {
+        return lista;
     }
-*/
 
+    public static TextView getTotal() {
+        return total;
+    }
 
+    public static String getUsuario() {
+        return usuario;
+    }
+
+    public static int getAcum() {
+        return acum;
+    }
+
+    public static Context getContext() {
+        return context;
+    }
 
 }//Fin Class
 

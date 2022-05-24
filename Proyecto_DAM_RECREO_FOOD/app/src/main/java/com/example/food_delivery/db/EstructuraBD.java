@@ -57,6 +57,11 @@ public class EstructuraBD {
             "DROP TABLE IF EXISTS " + EstructuraBD.TABLE_NAME_02;
 
     //Declaración de constante que contiene la sentencia SQL para eliminar los registros de la tabla "PEDIDOS" de la BD
+    public static final String SQL_DELETE_REGISTERS_01 =
+            "DELETE FROM " + EstructuraBD.TABLE_NAME_01;
+
+
+    //Declaración de constante que contiene la sentencia SQL para eliminar los registros de la tabla "PEDIDOS" de la BD
     public static final String SQL_DELETE_REGISTERS_02 =
             "DELETE FROM " + EstructuraBD.TABLE_NAME_02;
 }//Fin Class

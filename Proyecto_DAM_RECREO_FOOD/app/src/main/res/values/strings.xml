@@ -44,7 +44,10 @@
     <string name="fecha_de_caducidad">Fecha de caducidad</string>
     <string name="numero">Numero</string>
     <string name="totalOrder">Total: </string>
-
+    <string name="pago_con_tarjeta">Pago con tarjeta</string>
+    <string name="pago_en_efectivo">Pago en efectivo</string>
+    <string name="year">AÑO</string>
+    <string name="mes">MES</string>
 
     <string-array name="opciones">
         <item>Bebidas</item>
@@ -54,6 +57,5 @@
         <item>Sandwiches</item>
         <item>Pizzas</item>
         <item>Postres</item>
-        <item>Ir al Carro de compras</item>
     </string-array>
 </resources>

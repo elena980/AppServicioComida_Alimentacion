@@ -14,8 +14,10 @@ public class HelperBD extends SQLiteOpenHelper {
 
     //Declaración de constantes que contienen información de la BD a la que se realiza la conexión
     public static final String DATABASE_NAME = "food_delivery.db";
+    public static final int DATA_VERSION = 1;
     public static final String TABLA_USUARIOS = "USUARIOS";
     public static final String TABLA_PEDIDOS = "PEDIDOS";
+
 
     /**
      * Contructor por defecto
@@ -23,7 +25,7 @@ public class HelperBD extends SQLiteOpenHelper {
      * @param context Parametro por defecto
      */
     public HelperBD(Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, DATA_VERSION);
     }
 
     /**
@@ -34,8 +36,6 @@ public class HelperBD extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //db.execSQL(EstructuraBD.SQL_CREATE_ENTRIES_01);
-        //db.execSQL(EstructuraBD.SQL_CREATE_ENTRIES_02);
         db.execSQL("CREATE TABLE " + EstructuraBD.TABLE_NAME_01 +
                 " (ID_USUARIO INTEGER PRIMARY KEY AUTOINCREMENT," +
                 " USUARIO TEXT, PASSWORD TEXT, NOMBRE TEXT," +
@@ -46,41 +46,29 @@ public class HelperBD extends SQLiteOpenHelper {
                 " USUARIO TEXT, NOMBRE TEXT, DESCRIPCION TEXT," +
                 " CANTIDAD TEXT, PRECIO TEXT, " +
                 " FOREIGN KEY (USUARIO) REFERENCES " + EstructuraBD.TABLE_NAME_01 + "(ID_USUARIO))");
-
-
     }//Fin onCreate()
 
-    /*
-    @Override
-    public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + TABLA_USUARIOS + "(ID_USUARIO INTEGER PRIMARY KEY AUTOINCREMENT, USUARIO TEXT, PASSWORD TEXT, NOMBRE TEXT, APELLIDOS TEXT, DIRECCION TEXT, TELEFONO TEXT)");
-        db.execSQL("CREATE TABLE " + TABLA_PEDIDOS + "(ID_PEDIDOS INTEGER PRIMARY KEY AUTOINCREMENT, USUARIO TEXT, NOMBRE TEXT, DESCRIPCION TEXT, CANTIDAD TEXT, PRECIO TEXT, FOREIGN KEY (USUARIO) REFERENCES USUARIOS(ID_USUARIO))");
-    }
-    */
-
     /**
-     * Método encargado de eliminar la tabla especificada a modo de actualización
-     *
-     * @param db         Objeto de la clase SQLiteDatabase
+     * Método encargado de eliminar la tabla especificada en la constante de la clase EstructuraBD a modo de actualización
+     * @param db Objeto de la clase SQLiteDatabase
      * @param oldVersion Id de la versión de la BD anterior
      * @param newVersion Id de la versión de la BD nueva
      */
-
-    @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLA_USUARIOS);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLA_PEDIDOS);
-        onCreate(db);
-    }//Fin onUpgrade()
-
-    /*
-    @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL(EstructuraBD.SQL_DELETE_ENTRIES_01);
         db.execSQL(EstructuraBD.SQL_DELETE_ENTRIES_02);
         onCreate(db);
     }//Fin onUpgrade()
-    */
+
+    /**
+     * Método encargado de eliminar la tabla especificada en la constante de la clase EstructuraBD a modo de desactualización
+     * @param db Objeto de la clase SQLiteDatabase
+     * @param oldVersion Id de la versión de la BD anterior
+     * @param newVersion Id de la versión de la BD nueva
+     */
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        onUpgrade(db, oldVersion, newVersion);
+    }//Fin onDowngrade()
 
     public void addUsuario(String usuario, String pass, String nombre, String apellidos, String direccion, String telefono) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -166,7 +154,6 @@ public class HelperBD extends SQLiteOpenHelper {
     }
 
     public void agregarCarrito(String usuario, String nombre, String descripcion, String cantidad, String precio){
-
         //Se habilita la base de datos para ingresar datos
         SQLiteDatabase db = this.getWritableDatabase();
         //Se define una variable del tipo ContentValues dado que es el formato con el que funciona el ingreso de datos en una BD
@@ -181,9 +168,7 @@ public class HelperBD extends SQLiteOpenHelper {
         values.put("PRECIO", precio);
         //Se insertan los datos en la BD enviándo como parámetro el nombre de la tabla y la variable values con los datos
         long newRowId = db.insert("PEDIDOS", null, values);
-        // db.insert("PEDIDOS", null, values);
         db.close();
-
     }//Fin agregarcarrito()
 
     public void borrarPedido (String usuario) {
@@ -194,145 +179,14 @@ public class HelperBD extends SQLiteOpenHelper {
         db.close();
     }//Fin agregarcarrito()
 
-    public ArrayList<String> obtenerPedidos(String usuario) {
+    public Cursor ejecutarQuery(String usuario){
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.rawQuery("SELECT NOMBRE, CANTIDAD, PRECIO FROM PEDIDOS WHERE USUARIO=?", new String[]{usuario});
-
-        int regs = cursor.getCount();
-        if (regs == 0) {
-            db.close();
-            return null;
-        } else {
-            int acum = 0;
-            ArrayList<String> producto = new ArrayList<String>();
-            // int cant = Integer.parseInt(cursor.getString(1));
-            //String[] nombres = new String[regs];
-            //String [] cantidades = new String [regs];
-            //String [] precios = new String [regs];
-            cursor.moveToFirst();
-            for (int i = 0; i < regs; i++) {
-                int cant = Integer.parseInt(cursor.getString(1));
-                int precio = Integer.parseInt(cursor.getString(2));
-                producto.add(cursor.getString(0) + " \nCantidad: " + cant + " \nPrecio unitario: $" + precio +
-                        " \nSubtotal: $" + (precio * cant));
-                // nombres[i] = cursor.getString(0);
-                // cantidades[i] = cursor.getString(1);
-                // precios[i] = cursor.getString(2);
-                acum = acum + (precio * cant);
-                cursor.moveToNext();
-            }
-            db.close();
-            return producto;
-        }
-    }
-/*
-    public ArrayList<String> obtenerPedidos02(){
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor cursor = db.rawQuery("SELECT NOMBRE, CANTIDAD, PRECIO FROM PEDIDOS WHERE USUARIO=?",null);
-
-        int regs = cursor.getCount();
-        if(regs == 0){
-            db.close();
-            return null;
-        }else {
-            int acum = 0;
-            ArrayList<String> producto = new ArrayList<String>();
-            // int cant = Integer.parseInt(cursor.getString(1));
-            //String[] nombres = new String[regs];
-            //String [] cantidades = new String [regs];
-            //String [] precios = new String [regs];
-            cursor.moveToFirst();
-            for (int i = 0; i < regs; i++) {
-                int cant = Integer.parseInt(cursor.getString(1));
-                int precio = Integer.parseInt(cursor.getString(2));
-                producto.add(cursor.getString(0) + " \nCantidad: " + cant + " \nPrecio unitario: $" + precio +
-                        " \nSubtotal: $" + (precio * cant));
-                // nombres[i] = cursor.getString(0);
-                // cantidades[i] = cursor.getString(1);
-                // precios[i] = cursor.getString(2);
-                acum = acum + (precio * cant);
-                cursor.moveToNext();
-            }
-            db.close();
-            return producto;
-
-        }
-    }
-    */
-
-/*
-    //public String[] obtenerPedidos03(){
-    public String[] obtenerPedidos03() {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        Cursor cursor = db.rawQuery("SELECT NOMBRE, CANTIDAD, PRECIO FROM PEDIDOS", null);
-
-        int regs = cursor.getCount();
-        if(regs == 0) {
-            db.close();
-            return null;
-        }else {
-            int acum = 0;
-            //ArrayList<String> producto = new ArrayList<String>();
-            //String[] nombres = new String[regs];
-            //String[] cantidades = new String [regs];
-            //String [] precios = new String [regs];
-            String[] productos = new String[regs];
-            cursor.moveToFirst();
-            for (int i = 0; i < regs; i++) {
-                int cant = Integer.parseInt(cursor.getString(1));
-                int precio = Integer.parseInt(cursor.getString(2));
-                productos[i] = (cursor.getString(0) + " \nCantidad: " + cant + " \nPrecio unitario: €" + precio +
-                        " \nSubtotal: " + (precio * cant) + " €");
-                acum = acum + (precio * cant);
-                //nombres[i] = cursor.getString(0);
-                //cantidades[i] = cursor.getString(1);
-                //precios [i] = cursor.getString(2);
-
-                cursor.moveToNext();
-            }
-            db.close();
-            return productos;
-        }
+        return cursor;
     }
 
-        /*
-        }else {
-            int acum = 0;
-            ArrayList<String> producto = new ArrayList<String>();
-            // int cant = Integer.parseInt(cursor.getString(1));
-            //String[] nombres = new String[regs];
-            //String [] cantidades = new String [regs];
-            //String [] precios = new String [regs];
-            cursor.moveToFirst();
-            for (int i = 0; i < regs; i++) {
-                int cant = Integer.parseInt(cursor.getString(1));
-                int precio = Integer.parseInt(cursor.getString(2));
-                producto.add(cursor.getString(0) + " \nCantidad: " + cant + " \nPrecio unitario: $" + precio +
-                        " \nSubtotal: $" + (precio * cant));
-                // nombres[i] = cursor.getString(0);
-                // cantidades[i] = cursor.getString(1);
-                // precios[i] = cursor.getString(2);
-                acum = acum + (precio * cant);
-                cursor.moveToNext();
-            }
-            db.close();
-            return producto;
-
-        }
-
-
-
-*/
-        public int numeroRegistros () {
-            SQLiteDatabase db = this.getReadableDatabase();
-
-            Cursor cursor01 = db.rawQuery("SELECT * FROM PEDIDOS", null);
-            return cursor01.getCount();
-        }
-    }
+}
 
 
 

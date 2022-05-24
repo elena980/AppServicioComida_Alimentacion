@@ -26,7 +26,6 @@ public class SplashActivity extends AppCompatActivity implements Animation.Anima
 
         Animation anim = AnimationUtils.loadAnimation(this,R.anim.animacion);
         titulo.startAnimation(anim);
-        // anim.setAnimationListener(this);
 
         ImageView logo = (ImageView) findViewById(R.id.imagen01);
         Animation animacion02 = AnimationUtils.loadAnimation(this,R.anim.animacion_logo);

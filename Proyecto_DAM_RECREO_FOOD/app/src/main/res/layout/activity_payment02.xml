@@ -6,143 +6,172 @@
     android:layout_height="match_parent"
     tools:context=".PaymentActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radio_tarjeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/pago_con_tarjeta"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/editTextName"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/name" />
+
+            <EditText
+                android:id="@+id/editTextLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="0dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/surname"
+                />
+
+            <EditText
+                android:id="@+id/editTextCardNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="0dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Número de tarjeta"
+                />
+
+            <TextView
+                android:id="@+id/textViewExpireDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="0dp"
+                android:text="@string/fecha_de_caducidad"
+                android:textSize="20sp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editTextExpireMonth"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="0dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/mes"
+                    />
+
+                <EditText
+                    android:id="@+id/editTextExpireYear"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/editTextExpireMonth"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/year"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewCode"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="35dp"
+                android:text="@string/csv"
+                android:textSize="20sp"
+                />
+
+            <EditText
+                android:id="@+id/editTextCSV"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="38dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/csv"/>
+
+            <TextView
+                android:id="@+id/textoBlanco"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="38dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="" />
+            <TextView
+                android:id="@+id/textoBlanco01"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="38dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text=""/>
+
+
+            <RadioButton
+                android:id="@+id/radio_efectivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/pago_en_efectivo"
+                android:textSize="25sp" />
+        </RadioGroup>
+    </LinearLayout>
+
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewTotalOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="10dp"
-        android:text="Tarjeta de crédito"
-        android:textSize="25sp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="425dp"
+        android:text="TOTAL ORDER"
+        android:textSize="35sp"
         android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Nombre" />
-
-    <EditText
-        android:id="@+id/editTextTextLastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="80dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Apellidos" />
-
-    <EditText
-        android:id="@+id/editTextTextCardNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="155dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Número de tarjeta" />
-
-    <EditText
-        android:id="@+id/editTextTextExpireDate1"
-        android:layout_width="55dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="225dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="MES" />
-
-
-    <EditText
-        android:id="@+id/editTextTextExpireDate2"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="225dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="AÑO" />
-
-    <EditText
-        android:id="@+id/editTextTextCSV"
-        android:layout_width="44dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="290dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="CSV" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="146dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="130dp"
-        android:text="NºTarjeta "
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="205dp"
-        android:text="Fecha de caducidad"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="119dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="270dp"
-        android:layout_marginBottom="0dp"
-        android:text="Código CSV"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textView50"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="369dp"
-        android:text="Pago en efectivo"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/textView80"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="450dp"
-        android:text="TOTAL:"
-        android:textStyle="bold"
-        android:textSize="35sp" />
 
     <Button
         android:id="@+id/button2"
@@ -151,10 +180,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="48dp"
         android:background="@drawable/boton"
         android:text="CONFIRMAR"
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:onClick="confirmar"/>
 
 </RelativeLayout>

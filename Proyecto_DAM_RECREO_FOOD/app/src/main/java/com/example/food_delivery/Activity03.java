@@ -27,15 +27,17 @@ public class Activity03 extends AppCompatActivity {
     private TextView nombre,detalle,precio,cant;
     private ImageView imagen01;
     private String valor;
-    public static String usuario;
+    private String usuario;
 
     HelperBD helper;
 
     @Override
+    /**
+     * Métedo onCreate por defecto
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_03);
-
         usuario = getIntent().getStringExtra("usuario");
         helper = new HelperBD(this);
         getSupportActionBar().hide();
@@ -64,7 +66,6 @@ public class Activity03 extends AppCompatActivity {
 
         //LUEGO DE EVALUAR EL TIPO DE PRODUCTO ESCOGIDO SE VISUALIZAN LOS DATOS CORRESPONDIENTES
         // INSTANCIADOS EN LOS COMPONENTES DEL ACTIVITY03
-
         switch (producto) {
 
             //En el caso de que la varaiable "producto" obtenida sea bebidas
@@ -131,28 +132,9 @@ public class Activity03 extends AppCompatActivity {
                 break;
 
         }
-        /*
-        //LUEGO DE EVALUAR EL TIPO DE PRODUCTO ESCOGIDO SE VISUALIZAN LOS DATOS CORRESPONDIENTES
-        // INSTANCIADOS EN LOS COMPONENTES DEL ACTIVITY03
-        if (producto.equals("cerveza")) {//En el caso de que la varaiable "producto" obtenida sea cerveza
-            //Los TextView son definidos con sus valores correspondientes
-            nombre.setText(bebida.getNombre());
-            detalle.setText(bebida.getDescripcion());
-            imagen01.setImageResource(bebida.getImagenID());
-            valor = String.valueOf(bebida.getPrecio());
-            precio.setText("Precio: " + valor + " €");
-
-        if (producto.equals("pizza")) {//En el caso de que la varaiable "producto" obtenida sea pizza
-            //Los TextView son definidos con sus valores correspondientes
-            nombre.setText(pizza.getNombre());
-            detalle.setText(pizza.getDescripcion());
-            imagen01.setImageResource(pizza.getImagenID());
-            valor = String.valueOf(pizza.getPrecio());
-            precio.setText("Precio: " + valor + " €");
-        }//Fin If
     }//Fin onCreate()
-        */
-    }
+
+
     /**
      * Método utilizado para el botón que aumenta la cantidad del producto
      * @param view Parámetro por defecto
@@ -168,7 +150,7 @@ public class Activity03 extends AppCompatActivity {
 
     /**
      * Método utilizado para el botón que desminuye la cantidad del producto
-     * @param view
+     * @param view Parámetro por defecto
      */
 
     public void restar(View view){
@@ -185,27 +167,22 @@ public class Activity03 extends AppCompatActivity {
         }//Fin If
     }//Fin restar()
 
-    public void addProduct(View view){
-        //usuario = getIntent().getStringExtra("usuario");
-
-        helper.agregarCarrito(usuario, nombre.getText().toString(), detalle.getText().toString(), cant.getText().toString(), precio.getText().toString());
-
-        //Se informa por pantalla ingreso exitoso
-        Toast.makeText(getApplicationContext(),"SE HA AÑADIDO EL ARTÍCULO AL CARRITO" ,Toast.LENGTH_LONG).show();
-
-        /*
+    /**
+     * Método encargado de agregar el Item a la base de datos SQLite
+     * @param view Parámetro por defecto
+     */
+    public void agregarCarrito(View view){
+        usuario = getIntent().getStringExtra("usuario");
         //HelperBD helper = new HelperBD(this);
-
         //Se habilita la base de datos para ingresar datos
         SQLiteDatabase db = helper.getWritableDatabase();
-
         //Se define una variable del tipo ContentValues dado que es el formato con el que funciona el ingreso de datos en una BD
         // del tipo SQLite
         ContentValues values = new ContentValues();
 
         //Se intgresan los valores del producto en la variable values
         values.put("USUARIO", usuario);
-        values.put("NOMBRE", nombre.getText().toString() );
+        values.put("NOMBRE", nombre.getText().toString());
         values.put("DESCRIPCION", detalle.getText().toString());
         values.put("CANTIDAD", cant.getText().toString());
         values.put("PRECIO", precio.getText().toString());
@@ -213,9 +190,8 @@ public class Activity03 extends AppCompatActivity {
         //long newRowId = db.insert("PEDIDOS", null, values);
         db.insert("PEDIDOS", null, values);
         db.close();
-        */
-
+        //Se informa por pantalla ingreso exitoso
+        Toast.makeText(getApplicationContext(),"SE HA AÑADIDO EL ARTÍCULO AL CARRITO" ,Toast.LENGTH_LONG).show();
     }//Fin agregarcarrito()
 
-
-}
+}//Fin Class

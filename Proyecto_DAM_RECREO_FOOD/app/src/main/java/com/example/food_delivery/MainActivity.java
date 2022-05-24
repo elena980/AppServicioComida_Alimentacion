@@ -33,39 +33,11 @@ public class MainActivity extends AppCompatActivity {
                                          public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                              //SE EVALÚA QUE LA SELECCIÓN NO FUESE NULA
                                              if (position != -1) {
-                                                 //Intent intento = new Intent(MainActivity.this, Activity02.class);
-                                                 //intento.putExtra("posicion", position);
-                                                 //startActivity(intento);
-
-                  /*
-                  //En caso de ser cualquier opcion, excepto por el carrito, envía al Activity2
-
-                    if (position != 2) {
-                        Intent intento = new Intent(MainActivity.this, Activity02.class);
-                        intento.putExtra("posicion", position);
-                        startActivity(intento);
-
-                    } else {//Caso contratio envía al ActivityStore que muestra el carrito
-
-                        Intent intento = new Intent(MainActivity.this, ActivityStore.class);
-                                                     startActivity(intento);
-                                                 }//Fin If
-                                             }//Fin If
-                                         }//Fin onItemClick()
-                                     }//Fin setOnItem..
-                    */
-                                             }
-                                             if (position != 7) {
                                                  Intent intento = new Intent(MainActivity.this, Activity02.class);
                                                  intento.putExtra("posicion", position);
                                                  intento.putExtra("usuario", usuario);
                                                  startActivity(intento);
-                                                 // Fin if
-                                             }else{
-                                                 Intent intento = new Intent(MainActivity.this, ActivityStore.class);
-                                                 intento.putExtra("usuario", usuario);
-                                                 startActivity(intento);
-                                             }
+                                             }// Fin if
                                          }// Fin onItemClick()
                                      }// Fin setOnItem
         );
@@ -84,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
 
             case R.id.carrito:
-                Intent intent01 = new Intent(MainActivity.this, ActivityStore02.class);
+                Intent intent01 = new Intent(MainActivity.this, ActivityStore.class);
                 intent01.putExtra("usuario", usuario);
                 startActivity(intent01);
                 return true;

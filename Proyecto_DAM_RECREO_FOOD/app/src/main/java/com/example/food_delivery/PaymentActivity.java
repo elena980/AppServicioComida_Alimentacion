@@ -23,45 +23,44 @@ import com.example.food_delivery.db.HelperBD;
 
 public class PaymentActivity extends AppCompatActivity {
 
+    String usuario;
+    TextView total;
+
+    ActivityStore activityStore = new ActivityStore();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment);
-
-        //nameCard = (EditText) findViewById(R.id.nameCard);
-        //numberCard = (EditText) findViewById(R.id.numberCard);
-        //expirateDate = (EditText) findViewById(R.id.expirate_date);
-        //csv = (EditText) findViewById(R.id.csv);
+        setContentView(R.layout.activity_payment02);
+        usuario = getIntent().getStringExtra("usuario");
+        total = activityStore.getTotal();
+        total = (TextView) findViewById(R.id.txt_total_order);
         this.setTitle("Método de pago");
 
     }
 
-}
-    /*
+    public void confirmar(View view) {
+        Intent intent = new Intent(this, OrderActivity.class);
+        intent.putExtra("usuario", usuario);
+        startActivity(intent);
+    }
+
     public void onRadioButtonClicked(View view) {
 
         boolean checked = ((RadioButton) view).isChecked();
 
         switch(view.getId()) {
-            case R.id.card:
+            case R.id.radio_tarjeta:
                 if (checked)
-                    nameCard.setVisibility(VISIBLE);
-                    numberCard.setVisibility(VISIBLE);
-                    expirateDate.setVisibility(VISIBLE);
-                    csv.setVisibility(VISIBLE);
+                    Toast.makeText(getApplicationContext(),"card payment" ,Toast.LENGTH_LONG).show();
                 break;
-            case R.id.cash:
+            case R.id.radio_efectivo:
                 if (checked)
-                    nameCard.setVisibility(GONE);
-                    numberCard.setVisibility(GONE);
-                    expirateDate.setVisibility(GONE);
-                    csv.setVisibility(GONE);
                     Toast.makeText(getApplicationContext(),"cash payment" ,Toast.LENGTH_LONG).show();
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + view.getId());
         }
     }
-*/
+}
 

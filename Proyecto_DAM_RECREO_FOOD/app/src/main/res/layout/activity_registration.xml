@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".RegistrationActivity">
 
-    <!--
-    <ImageView
-        android:id="@+id/fondo01"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@mipmap/fondo">
-    </ImageView>
-    -->
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -130,46 +122,4 @@
         android:textColor="@color/white"
         android:onClick="crearCuenta"/>
 
-    <!--
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@android:color/white"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:padding="10dp">
-
-        <com.google.android.material.textfield.TextInputLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nameTextBox"
-                android:layout_height=""
-                android:hint="@string/nombre"
-                android:layout_width="">
-                <requestFocus/>
-
-            </com.google.android.material.textfield.TextInputEditText>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/cajaPass"
-                android:layout_height=""
-                android:layout_width=""
-                android:inputType="textPassword"  />
-        </com.google.android.material.textfield.TextInputLayout>
-
-    </LinearLayout>
--->
 </RelativeLayout>
